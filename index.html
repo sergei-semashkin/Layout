@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпаргалка по Flexbox CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--Начало header-->
+    <header class="header">
+        <p class="logo">ТИПИЧНЫЙ ВЕРСТАЛЬЩИК</p>
+        <ul class="list">
+            <li class="item">БЛОГ</li>
+            <li class="item">ОБУЧЕНИЕ</li>
+            <li class="item">ПОДДЕРЖКА СООБЩЕСТВА</li>
+            <li class="item">ПОЛЕЗНОСТИ</li>
+            <li><img src="png/имени.png"></li>
+        </ul>
+    </header>
+<!--Конец header-->
+    <div class="conteiner">
+        <div class="title-block">
+            <h1 class="title">Шпаргалка по Flexbox CSS</h1>
+            <p class="title-text">Вся документация по свойству <span class="title-text-flex">flex</span> находится на <a href="https://www.w3.org/TR/css-flexbox-1/#flex-containers" class="title-text-link">официальном сайте</a>.</p>
+        </div>
+<!--Секция 1 (display)-->        
+        <section class="section">
+            <h2 class="subtitle">display</h2>
+            <div class="button">
+                <button class="btn">FLEX</button>
+                <button class="btn">INLINE-FLEX</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="unique1">Здесь текст</p>
+                    <p class="border-box1">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span class="background">display: flex;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.</p>
+                <p><b>Применяется ко:</b> всем элементам.</p>
+                <p><b>flex</b></p>
+                <p class="aside-margin">Элемент ведёт себя как блочный и выкладывает содержимое согласно флекс-модели.</p>
+                <p><b>inline-flex</b></p>
+                <p class="aside-margin">Элемент ведёт себя как строчный и выкладывает содержимое согласно флекс-модели.</p>
+            </div>
+        </section>
+<!--Секция 2 (flex-direction)-->   
+        <section class="section">
+            <h2 class="subtitle">flex-direction</h2>
+            <div class="button">
+                <button class="btn">ROW</button>
+                <button class="btn">ROW-REVERSE</button>
+                <button class="btn">COLUMN</button>
+                <button class="btn">COLUMN-REVERSE</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border border-box2">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span class="background">flex-direction: row;</span><br>
+                        <span>height: 100%;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство flex-direction задаёт направление основных осей в контейнере и тем самым определяет положение флексов в контейнере. На само направление также влияет значение атрибута dir у контейнера.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>row</b></p>
+                <p class="aside-margin">Главная ось направлена так же, как и ориентация текста, по умолчанию слева направо. Если значение dir задано как rtl, то направление оси идёт справа налево.</p>
+                <p><b>row-reverse</b></p>
+                <p class="aside-margin">Похоже на значение row, но меняются местами начальная и конечная точки и главная ось направлена справа налево. Если значение dir задано как rtl, то направление оси идёт слева направо.</p>
+                <p><b>column</b></p>
+                <p class="aside-margin">Главная ось располагается вертикально и направлена сверху вниз.</p>
+                <p><b>column-reverse</b></p>
+                <p class="aside-margin">Главная ось располагается вертикально, но меняется положение начальной и конечной точек и ось направлена снизу вверх.</p>
+            </div>
+        </section>
+<!--Секция 3 (flex-wrap)-->  
+        <section class="section">
+            <h2 class="subtitle">flex-wrap</h2>
+            <div class="button">
+                <button class="btn">NOWRAP</button>
+                <button class="btn">WRAP</button>
+                <button class="btn">WRAP-REVERSE</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box3 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span>align-items: flex-start;</span><br>
+                        <span class="background">flex-wrap: wrap-reverse;</span><br>
+                        <span>height: 100%;</span><br>
+                    } <br>
+                    .child {<br>
+                        <span>width: 40%;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство flex-wrap Указывает, следует ли флексам располагаться в одну строку или можно занять несколько строк. Если перенос строк допускается, то свойство также позволяет контролировать направление, в котором выкладываются строки.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b>nowrap.</p>
+                <p><b>nowrap</b></p>
+                <p class="aside-margin">Флексы выстраиваются в одну линию.</p>
+                <p><b>wrap</b></p>
+                <p class="aside-margin">Флексы выстраиваются в несколько строк, их направление задаётся свойством flex-direction.</p>
+                <p><b>wrap-reverse</b></p>
+                <p class="aside-margin">Флексы выстраиваются в несколько строк, в направлении, противоположном flex-direction.</p>
+            </div>
+        </section>
+<!--Секция 4 (flex-flow)-->  
+        <section class="section">
+            <h2 class="subtitle">flex-flow</h2>
+            <div class="button">
+                <button class="btn">ROW NOWRAP</button>
+                <button class="btn">COLUMN-REVERSE</button>
+                <button class="btn">COLUMN WRAP</button>
+                <button class="btn">ROW-REVERSE WRAP-REVERSE</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box4 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span class="background">flex-flow: row nowrap;</span><br>
+                        <span>height: 100%;</span><br>
+                    } <br>
+                    .child { <br>
+                        <span>width: 40%;</span><br>
+                        <span>height: 40%;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство flex-flow является сокращённым свойством для отдельных свойств flex-direction и flex-wrap.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b>row nowrap.</p>
+            </div>
+        </section>
+<!--Секция 5 (order)-->  
+        <section class="section">
+            <h2 class="subtitle">order</h2>
+            <div class="button">
+                <button class="btn">-1</button>
+                <button class="btn">0</button>
+                <button class="btn">1</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box5 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span class="active-box5">3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span class="background"> align-items: flex-start;</span><br>
+                        <span>height: 100%;</span><br>
+                    } <br>
+                    .child { <br>
+                        <span> order: 0;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство order определяет порядок вывода флексов внутри флекс-контейнера. Элементы располагаются согласно значениям свойства order от меньшего к большему. При равных значениях order элементы выводятся в том порядке, в каком они появляются в исходном коде.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b>0.</p>
+            </div>
+        </section>
+<!--Секция 6 (justify-content)-->  
+        <section class="section">
+            <h2 class="subtitle">justify-content</h2>
+            <div class="button">
+                <button class="btn">FLEX-START</button>
+                <button class="btn">FLEX-END</button>
+                <button class="btn">CENTER</button>
+                <button class="btn">SPACE-BETWEEN</button>
+                <button class="btn">SPACE-AROUND</button>
+                <button class="btn">SPACE-EVENLY</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box6 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span class="background">justify-content: flex-start;</span><br>
+                        <span>height: 100%;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство justify-content определяет, как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера. Это делается после того, как применяются размеры и автоматические отступы, за исключением ситуации, когда по крайней мере у одного элемента flex-grow больше нуля. При этом не остаётся никакого свободного пространства для манипулирования.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b>flex-start.</p>
+                <p><b>flex-start</b></p>
+                <p class="aside-margin">Флексы прижаты к началу строки.</p>
+                <p><b>flex-end</b></p>
+                <p class="aside-margin">Флексы прижаты к концу строки.</p>
+                <p><b>center</b></p>
+                <p class="aside-margin">Флексы выравниваются по центру строки.</p>
+                <p><b>space-between</b></p>
+                <p class="aside-margin">Флексы равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера.</p>
+                <p><b>space-around</b></p>
+                <p class="aside-margin">Флексы равномерно распределяются по всей строке. Пустое пространство перед первым и после последнего элементов равно половине пространства между двумя соседними элементами.</p>
+                <p><b>space-evenly</b></p>
+                <p class="aside-margin">Флексы распределяются так, что расстояние между любыми двумя соседними элементами, а также перед первым и после последнего, было одинаковым.</p>
+            </div>
+        </section>
+<!--Секция 7 (align-items)-->  
+        <section class="section">
+            <h2 class="subtitle">align-items</h2>
+            <div class="button">
+                <button class="btn">FLEX-START</button>
+                <button class="btn">FLEX-END</button>
+                <button class="btn">CENTER</button>
+                <button class="btn">BASELINE</button>
+                <button class="btn">STRETCH</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box7 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span class="background">align-items: flex-start;</span><br>
+                        <span>height: 100%;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство align-items выравнивает флекс-элементы внутри контейнера в перпендикулярном направлении.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b>stretch.</p>
+                <p><b>flex-start</b></p>
+                <p class="aside-margin">Флексы выравниваются в начале поперечной оси контейнера.</p>
+                <p><b>flex-end</b></p>
+                <p class="aside-margin">Флексы выравниваются в конце поперечной оси контейнера.</p>
+                <p><b>center</b></p>
+                <p class="aside-margin">Флексы выравниваются по линии поперечной оси.</p>
+                <p><b>baseline</b></p>
+                <p class="aside-margin">Флексы выравниваются по их базовой линии.</p>
+                <p><b>stretch</b></p>
+                <p class="aside-margin">Флексы растягиваются таким образом, чтобы занять всё доступное пространство контейнера.</p>
+            </div>
+        </section>
+<!--Секция 8 (align-self)-->  
+        <section class="section">
+            <h2 class="subtitle">align-self</h2>
+            <div class="button">
+                <button class="btn">FLEX-START</button>
+                <button class="btn">FLEX-END</button>
+                <button class="btn">CENTER</button>
+                <button class="btn">BASELINE</button>
+                <button class="btn">STRETCH</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box8 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span class="active-box8">3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span>height: 100%;</span><br>
+                    } <br>
+                    .child { <br>
+                        <span class="background">align-self: flex-start;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство align-self выравнивает флекс-элементы текущей строки, переписывая значение align-items.</p>
+                <p><b>Применяется к:</b> flex элементам.</p>
+                <p><b>Значение по умолчанию:</b>auto.</p>
+                <p><b>flex-start</b></p>
+                <p class="aside-margin">Элемент выравнивается в начале поперечной оси контейнера.</p>
+                <p><b>flex-end</b></p>
+                <p class="aside-margin">Элемент выравнивается в конце поперечной оси контейнера.</p>
+                <p><b>center</b></p>
+                <p class="aside-margin">Элемент выравнивается по центральной линии на поперечной оси.</p>
+                <p><b>baseline</b></p>
+                <p class="aside-margin">Элемент выравнивается по базовой линии текста.</p>
+                <p><b>stretch</b></p>
+                <p class="aside-margin">Элемент растягивается таким образом, чтобы занять всё свободное пространство контейнера по поперечной оси.</p>
+            </div>
+        </section>
+<!--Секция 9 (align-content)-->  
+        <section class="section">
+            <h2 class="subtitle">align-content</h2>
+            <div class="button">
+                <button class="btn">FLEX-START</button>
+                <button class="btn">FLEX-END</button>
+                <button class="btn">CENTER</button>
+                <button class="btn">SPACE-BETWEEN</button>
+                <button class="btn">SPACE-AROUND</button>
+                <button class="btn">SPACE-EVENLY</button>
+                <button class="btn">STRETCH</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box9 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px" class="copy-icon"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span>flex-wrap: wrap;</span><br>
+                        <span class="background">align-content: flex-start;</span><br>
+                        <span>height: 100%;</span><br>
+                    } <br>
+                    .child { <br>
+                        <span>width: 30%;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство align-content задаёт тип выравнивания строк внутри flex контейнера по поперечной оси при наличии свободного пространства.</p>
+                <p><b>Применяется к:</b>flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b>stretch.</p>
+                <p><b>flex-start</b></p>
+                <p class="aside-margin">Строки располагаются в начале поперечной оси. Каждая следующая строка идёт вровень с предыдущей.</p>
+                <p><b>flex-end</b></p>
+                <p class="aside-margin">Строки располагаются начиная с конца поперечной оси. Каждая предыдущая строка идёт вровень со следующей.</p>
+                <p><b>center</b></p>
+                <p class="aside-margin">Строки располагаются по центру контейнера.</p>
+                <p><b>space-beetwen</b></p>
+                <p class="aside-margin">Строки равномерно распределяются в контейнере и расстояние между ними одинаково.</p></p>
+                <p><b>space-around</b></p>
+                <p class="aside-margin">Строки равномерно распределяются таким образом, чтобы пространство между двумя соседними строками было одинаковым. Пустое пространство перед первой строкой и после последней строки равно половине пространства между двумя соседними строками.</p>
+                <p><b>space-evenly</b></p>
+                <p class="aside-margin">Строки распределяются равномерно. Пустое пространство перед первой строкой и после последней строки имеет ту же ширину, что и у других строк.</p>
+                <p><b>stretch</b></p>
+                <p class="aside-margin">Строки равномерно растягиваются, заполняя свободное пространство.</p></p>
+            </div>
+        </section>
+<!--Секция 10 (flex-grow)-->  
+        <section class="section">
+            <h2 class="subtitle">flex-grow</h2>
+            <div class="button">
+                <button class="btn">0</button>
+                <button class="btn">1</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box10 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span class="active-box10">3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span>height: 100%;</span><br>
+                    } <br>
+                    .child-active { <br>
+                        <span class="background"> flex-grow: 1;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство flex-grow задает коэффициент роста flex для заданного числа. Отрицательное значение не валидно.</p>
+                <p><b>Применяется к:</b>flex элементам.</p>
+                <p><b>Значение по умолчанию:</b>0.</p>
+            </div>
+        </section>
+<!--Секция 11 (flex-shrink)-->  
+        <section class="section">
+            <h2 class="subtitle">flex-shrink</h2>
+            <div class="button">
+                <button class="btn">0</button>
+                <button class="btn">1</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box11 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span class="active-box11">3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span>height: 100%;</span><br>
+                    } <br>
+                    .child {<br>
+                        <span>width: 40%;</span><br>
+                    }<br>
+                    .child-active { <br>
+                        <span class="background">flex-shrink: 0;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство flex-shrink задает коэффициент сжатия flex с заданным числом. Отрицательное значение не валидно.</p>
+                <p><b>Применяется к:</b>flex элементам.</p>
+                <p><b>Значение по умолчанию:</b>1.</p>
+            </div>
+        </section>
+<!--Секция 12 (flex-basis)--> 
+        <section class="section">
+            <h2 class="subtitle">flex-basis</h2>
+            <div class="button">
+                <button class="btn">0</button>
+                <button class="btn">1</button>
+            </div>
+            <div class="content row">
+                <div class="column1 col-xs-12 col-lg-6">
+                    <p class="border-box12 border">
+                        <span>1</span>
+                        <span>2</span>
+                        <span class="active-box12">3</span>
+                        <span>4</span>
+                    </p>
+                </div>
+                <div class="column2 col-xs-12 col-lg-6">
+                    <button class="copy"><img src="png/copy.png" width="22px"></button>
+                    <p class="desc">.parent {<br>
+                        <span>display: flex;</span><br>
+                        <span>height: 100%;</span><br>
+                        <span>flex-wrap: wrap;</span><br>
+                        <span>align-content: center;</span><br>
+                    } <br>
+                    .child-active { <br>
+                        <span class="background">flex-basis: 30%;</span><br>
+                    }</p>
+                </div>
+            </div>
+            <div class="input">
+                <button class="russish">РУССКИЙ</button>
+                <button class="english">ENGLISH</button>
+            </div>
+            <div class="aside">
+                <p>Свойство flex-basis определяет основу флекса, которая является начальным размером элемента. Похоже на свойства width и height, к которым добавляется содержимое элемента.</p>
+                <p><b>Применяется к:</b>flex элементам.</p>
+                <p><b>Значение по умолчанию:</b>auto.</p>
+            </div>
+        </section>
+    </div>
+<!--Начало footer-->
+    <footer class="footer">
+        <div class="footer-col1">
+            <h2>СОЦ.СЕТИ</h2>
+            <hr>
+            <ul class="footer-list">
+                <li>YOUTUBE</li>
+                <li>ВКОНТАКТЕ</li>
+                <li>ТЕЛЕГРАМ</li>
+                <li>ТЕЛЕГРАМ ЧАТ</li>
+                <li>ТИКТОК</li>
+            </ul>
+        </div>
+        <div class="footer-col2">
+            <h2>ОБУЧЕНИЕ IT</h2>
+            <hr>
+            <ul class="footer-list">
+                <li>FRONTENDBLOK</li>
+            </ul>
+            <div class="socials">
+                <img src="png/Visa.png" width="30" class="visa">
+                <img src="png/Mastercard.png" width="28" class="mastercard">
+                <img src="png/Paypal.png" width="30" class="paypal">
+            </div>
+        </div>
+        <div class="footer-col3">
+            <h2>ПОЛЕЗНОСТИ</h2>
+            <hr>
+            <ul class="footer-list">
+                <li>ШПАРГАЛКА FLEXBOX CSS</li>
+                <li>ШПАРГАЛКА GRID CSS</li>
+                <li>ШПАРГАЛКА АДАПТИВНОСТИ</li>
+                <li>НАЗВАНИЯ КЛАССОВ</li>
+                <li>ШАБЛОН HTML</li>
+                <li>СБОРЩИК GULP</li>
+            </ul>
+        </div>
+        <div lcass="footer-col4">
+            <h2>ПРОБЛЕМЫ С ВЁРСТКОЙ ИЛИ<br>
+                ФРОНТЕНД РАЗРАБОТКОЙ?</h2>
+            <button class="unique2">ЗАДАЙ СВОЙ ВОПРОС</button>
+        </div>
+    </footer>
+</body>
+</html>
+
+        
+
